@@ -19,8 +19,11 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('api/',include('base.urls')),
+    #path('api/',include('base.urls')),
     path('admin/', admin.site.urls),
+    path('api/products/', include('base.urls.product_urls')),
+    path('api/users/', include('base.urls.user_urls')),
+    path('api/orders/', include('base.urls.order_urls')),
 ]
 
 
