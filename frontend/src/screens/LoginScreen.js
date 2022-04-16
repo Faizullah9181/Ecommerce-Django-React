@@ -65,13 +65,19 @@ function LoginScreen() {
           ></Form.Control>
         </Form.Group>
 
+
+        <Row className="py-3">
+          <Col style={{textAlign:'center'}}>
         <Button type="submit" variant="dark"   style={{ color: "black", fontWeight: "bold" }} >
           Sign In
         </Button>
+        </Col>
+
+        </Row>
       </Form>
 
       <Row className="py-3">
-        <Col>
+        <Col style={{textAlign:'center'}}>
           New Customer?{" "}
           <Link to={redirect ? `/register?redirect=${redirect}` : "/register"}>
             Register
