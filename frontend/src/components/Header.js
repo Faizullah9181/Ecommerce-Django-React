@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, Row, NavDropdown } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 import SearchBox from './SearchBox'
 import { logout } from "../actions/userActions";
+import '../index.css';
 
 function Header() {
   const userLogin = useSelector((state) => state.userLogin);
@@ -25,13 +26,9 @@ function Header() {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <SearchBox/>
-            <Nav className="ml-auto">
-              <LinkContainer to="/cart">
-                <Nav.Link>
-                  <i className="fas fa-shopping-cart"  ></i>Cart
-                </Nav.Link>
-              </LinkContainer>
+            {/* <SearchBox/> */}
+            <Nav className="ms-auto my-2 my-lg-1" style={{ maxHeight: "100px" }} navbarScroll>
+              
 
               {userInfo ? (
                 <NavDropdown title={userInfo.name} id="username">
@@ -66,6 +63,14 @@ function Header() {
                   </LinkContainer>
                 </NavDropdown>
               )}
+
+             
+              <LinkContainer to="/cart">
+                <Nav.Link>
+                  <i className="fas fa-shopping-cart"  ></i>Cart
+                </Nav.Link>
+              </LinkContainer>
+             
             </Nav>
           </Navbar.Collapse>
         </Container>
