@@ -14,3 +14,16 @@
 
 ### Next Coming Features-- Serach Products,Pagination ,Advance Carousel
 
+### Deployed with Nginx,Gunicorn and Heroku
+
+## Link:----  https://alphamart.herokuapp.com/
+
+
+## User Video
+
+https://user-images.githubusercontent.com/77627911/164076681-1eedf30a-04e6-497e-b427-9708adb34ea2.mp4
+
+## Admin Video
+
+https://user-images.githubusercontent.com/77627911/164076719-0dc56cf6-4de7-4abf-8a0b-73c459d820ba.mp4
+
