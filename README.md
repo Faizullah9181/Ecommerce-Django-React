@@ -1,8 +1,8 @@
 # Ecommerce Website With Django in Backend and React in Frontend
 
-## React,Django,React-bootstrap
+### React,Django,React-bootstrap
 
-## React-Router-v6
+### React-Router-v6
 
 ## Backend With Django-3.0
 
