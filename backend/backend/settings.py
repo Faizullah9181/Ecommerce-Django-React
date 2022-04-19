@@ -28,7 +28,7 @@ SECRET_KEY = 'senxiu&i$l-a(4yka_b0j#)upa37^*g5q#r9x2@fgz!yzvlfv&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alphmart.herokuapp.com','127.0.0.1', 'localhost']
 
 
 # Application definition
