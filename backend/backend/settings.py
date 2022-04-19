@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 import os
 from datetime import timedelta
 
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'senxiu&i$l-a(4yka_b0j#)upa37^*g5q#r9x2@fgz!yzvlfv&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alphamart.herokuapp.com','127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -82,6 +83,7 @@ SIMPLE_JWT = {
 
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 
     'django.middleware.security.SecurityMiddleware',
@@ -165,6 +167,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
+
+
+
 STATIC_URL = '/static/'
 MEDIA_URL = '/images/'
 
@@ -176,4 +181,10 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = 'static/images'
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
+
 CORS_ALLOW_ALL_ORIGINS = True
