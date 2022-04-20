@@ -12,7 +12,7 @@
 
 ### Review products ,change of review according to review given by users
 
-### Next Coming Features-- Serach Products,Pagination ,Advance Carousel
+### Next Coming Features-- Search Products,Pagination ,Advance Carousel
 
 ### Deployed with Nginx,Gunicorn and Heroku
 
