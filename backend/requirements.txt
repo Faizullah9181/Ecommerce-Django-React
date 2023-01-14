@@ -23,8 +23,6 @@ emoji==1.6.3
 entrypoints==0.3
 Faker==13.2.0
 filelock==3.4.2
-Flask==2.0.2
-Flask-Cors==3.0.10
 flatbuffers==1.12
 folium==0.12.1.post1
 gast==0.4.0
