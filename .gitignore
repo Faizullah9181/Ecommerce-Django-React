@@ -1,6 +1,4 @@
-node_modules
 /backend/backend/__pycache__
 /backend/base/__pycache__
 migrations
-/backend/frontend/node_modules
 /.env
