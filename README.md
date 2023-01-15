@@ -16,7 +16,7 @@
 
 ### Deployed with Nginx,Gunicorn and Heroku
 
-## Link:----  https://alphamart.herokuapp.com/
+## Link:----  https://alphamart.onrender.com/
 
 
 ## User Video
