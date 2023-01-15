@@ -12,8 +12,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from datetime import timedelta
-from dotenv import load_dotenv 
-load_dotenv() 
+from dotenv import load_dotenv
+load_dotenv()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -95,7 +95,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-     
+
 
 ]
 
@@ -105,7 +105,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR,'frontend/build')
+            os.path.join(BASE_DIR, 'frontend/build')
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -135,16 +135,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'djongo',
-        'NAME': 'alphamart',
-        'CLIENT': {
-            'host': 'os.environ.get(DB_HOST)',
-            'username': 'os.environ.get(DB_USER)',
-             'password': 'os.environ.get(DB_PASSWORD)',
-        }
+        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD':'ohbLticdYx0LQKHDFwua',
+        'HOST': 'containers-us-west-152.railway.app',
+        'PORT': '5638',
+
+        
     }
 }
-
 
 
 # Password validation
@@ -177,13 +177,11 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
-
 
 
 STATIC_URL = '/static/'
@@ -200,7 +198,6 @@ MEDIA_ROOT = 'static/images'
 
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 
 CORS_ALLOW_ALL_ORIGINS = True

@@ -2,3 +2,4 @@
 /backend/base/__pycache__
 migrations
 /.env
+node_modules
