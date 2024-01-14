@@ -12,8 +12,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 from datetime import timedelta
-from dotenv import load_dotenv
-load_dotenv()
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -133,19 +131,18 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # }
 
 
+# To use Neon with Django, you have to create a Project on Neon and specify the project connection settings in your settings.py in the same way as for standalone Postgres.
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2', 
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD':'ohbLticdYx0LQKHDFwua',
-        'HOST': 'containers-us-west-152.railway.app',
-        'PORT': '5638',
-
-        
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'neondb',
+        'USER': 'Faizullah9181',
+        'PASSWORD': 'n0SBDw2MyHPq',
+        'HOST': 'ep-spring-dream-a5bsxmip.us-east-2.aws.neon.tech',
+        'PORT': '5432'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -176,8 +173,6 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_L10N = True
-
-
 
 
 # Static files (CSS, JavaScript, Images)

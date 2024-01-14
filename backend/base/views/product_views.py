@@ -1,3 +1,4 @@
+from base.products import products
 from django.shortcuts import render
 
 from rest_framework.decorators import api_view, permission_classes
@@ -18,10 +19,10 @@ def getProducts(request):
         query = ''
 
     products = Product.objects.filter(
-        name__icontains=query).order_by('-createdAt')
+        name__icontains=query).order_by('createdAt')
 
     page = request.query_params.get('page')
-    paginator = Paginator(products, 5)
+    paginator = Paginator(products, 100)
 
     try:
         products = paginator.page(page)
@@ -151,3 +152,20 @@ def createProductReview(request, pk):
         product.save()
 
         return Response('Review Added')
+
+
+@api_view(['POST'])
+def createSeed(request):
+    for product in products:
+        newProduct = Product.objects.create(
+            user=request.user,
+            name=product['name'],
+            image=product['image'],
+            brand=product['brand'],
+            category=product['category'],
+            description="Best shoes ever",
+            price=product['price'],
+            countInStock=10,
+        )
+        newProduct.save()
+    return Response('Created')
