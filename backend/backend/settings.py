@@ -140,7 +140,11 @@ DATABASES = {
         'USER': 'Faizullah9181',
         'PASSWORD': 'n0SBDw2MyHPq',
         'HOST': 'ep-spring-dream-a5bsxmip.us-east-2.aws.neon.tech',
-        'PORT': '5432'
+        'PORT': '5432',
+        'OPTIONS': {
+            'sslmode': 'require',
+            'options': 'endpoint=ep-spring-dream-a5bsxmip'
+        },
     }
 }
 
